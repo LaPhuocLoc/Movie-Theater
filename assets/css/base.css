@@ -1,0 +1,225 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;500;700;900&family=Signika:wght@300;400;500;600;700&display=swap');
+
+*,
+*:before,
+*:after {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:active,
+:hover,
+:focus {
+    outline: 0 !important;
+    outline-offset: 0;
+}
+
+a,
+a:hover {
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--primary-color) !important;
+}
+
+ul,
+ol {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --primary-color: #528F2D;
+    --secondary-color: #151515;
+    --third-color: #82B440;
+    --white-color: #fff;
+    --text-color: #555;
+    --text-gray: #999;
+    --black-color: #000;
+    --primary-font: 'Noto Sans JP', sans-serif;
+    --secondary-font: 'Signika', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--primary-font);
+    font-size: 100%;
+    font-weight: 400;
+    line-height: 1rem;
+}
+
+html,
+body {
+    overflow-x: hidden;
+}
+
+/* Custom CSS Design */
+h1 {
+    font-size: 3rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    font-family: var(--secondary-font);
+    margin-bottom: var(--secondary-color);
+}
+
+h2 {
+    font-weight: 700;
+    font-size: 2.25rem;
+    text-transform: capitalize;
+    font-family: var(--secondary-font);
+    color: var(--secondary-color);
+    line-height: 3rem;
+}
+
+h4 {
+    font-weight: 800;
+    font-size: 1.125rem;
+    text-transform: capitalize;
+    font-family: var(--secondary-font);
+    margin-bottom: 0.5rem;
+}
+
+h5 {
+    font-weight: 700;
+    font-size: 1rem;
+    text-transform: capitalize;
+    font-family: var(--secondary-font);
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+
+}
+
+p {
+    font-size: 1rem;
+    color: var(--text-color);
+    font-weight: 400;
+    line-height: 1.75rem;
+}
+
+.section-padding {
+    padding: 100px 0 !important;
+}
+
+.main-btn {
+    display: inline-block;
+    padding: 0.625rem 1.875rem;
+    line-height: 1.5625rem;
+    background-color: var(--primary-color);
+    border: 0.1875rem solid var(--primary-color);
+    color: var(--white-color);
+    font-size: .9375rem;
+    font-weight: 600;
+    text-transform: capitalize;
+    box-shadow: 0 2px 10px -1px rgb(0 0 0 / 19%);
+    -webkit-transition: all .4s ease-out 0s;
+    -o-transition: all .4s ease-out 0s;
+    -moz-transition: all .4s ease-out 0s;
+    transition: all .4s ease-out 0s;
+}
+
+.white-btn {
+    padding: .625rem 1.875rem;
+    line-height: 1.5625rem;
+    background-color: var(--white-color);
+    border: 0.1875rem solid var(--white-color);
+    color: var(--text-color);
+    font-size: .9375rem;
+    font-weight: 600;
+    text-transform: capitalize;
+    box-shadow: 0px 2px 10px -1px rgb(0 0 0 / 19%);
+    -webkit-transition: all .4s ease-out 0s;
+    -o-transition: all .4s ease-out 0s;
+    -moz-transition: all .4s ease-out 0s;
+    transition: all .4s ease-out 0s;
+}
+
+.main-btn:hover {
+    background-color: transparent;
+    color: var(--primary-color);
+}
+
+.white-btn:hover {
+    background-color: transparent;
+    color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.more-btn {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 200px;
+    text-decoration: none;
+    font-size: 1rem;
+    line-height: 1rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    vertical-align: middle;
+    color: var(--text-color);
+    padding: 16px 22px;
+    margin: 0 auto;
+    transition: all .3s ease;
+    z-index: 1;
+}
+
+.more-btn:hover {
+    color: var(--white-color) !important;
+}
+
+.more-btn::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    border-radius: 24px;
+    width: 48px;
+    height: 48px;
+    transition: all .3s ease;
+    background: rgba(83, 143, 45, 0.5);
+    z-index: -1;
+}
+
+.more-btn:hover::before {
+    width: 100%;
+    background: rgba(83, 143, 45, 1);
+}
+
+.more-btn:active {
+    transform: scale(.96);
+}
+
+.more-btn-icon {
+    color: var(--text-color);
+    font-size: 1rem;
+    margin-left: 8px;
+    transition: all .3s ease
+}
+
+.more-btn:hover .more-btn-icon {
+    color: var(--white-color);
+}
+
+.back-top-btn {
+    background-color: var(--third-color);
+    border-radius: 50%;
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    color: var(--white-color);
+    box-shadow: 0 0 3px #555!important;
+    transition: all .4s ease-out 0s;
+    z-index: 999999;
+    display:none;
+}
+.back-top-btn:hover {
+    color: var(--primary-color);
+}
