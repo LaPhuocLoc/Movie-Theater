@@ -16,16 +16,30 @@
   <link rel="stylesheet" href="./assets/css/base.css">
   <link rel="stylesheet" href="./assets/css/main.css">
   <link rel="stylesheet" href="./assets/css/responsive-main.css">
+  <link rel="stylesheet" href="./assets/css/loader.css">
 </head>
 
 <body>
+  <div id="preload">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="loader">
+            <div class="loader-inner">
+              <div class="box"></div>
+              <div class="box2">LOADING</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
   <div class="wrapper">
     <!-- Header -->
     <div class="theater-header">
       <!-- Navigation Mobile -->
-      <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="offcanvas"
-        data-bs-target="#offcanvasRight" aria-controls="offcanvasRight" aria-expanded="false"
-        aria-label="Toggle navigation">
+      <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight"
+        aria-controls="offcanvasRight" aria-expanded="false" aria-label="Toggle navigation">
         <i class="fas fa-stream navbar-toggler-icon text-black d-flex align-items-center justify-content-center"></i>
       </button>
       <!-- Offcanvas -->
