@@ -1,23 +1,729 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bootstrap Site</title>
-  <!-- Library -->
-  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
-  <script src="./assets/js/slow-scroll.js"></script>
-  <script src="./assets/js/sticky-nav.js"></script>
-  <!-- Own Css -->
+  <title>Movie Theater</title>
+  <!--  Css -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+    integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
   <link rel="stylesheet" href="./assets/css/base.css">
   <link rel="stylesheet" href="./assets/css/main.css">
   <link rel="stylesheet" href="./assets/css/responsive-main.css">
 </head>
+
 <body>
-<button class="main-btn">1200 345 123</button>
+  <div class="wrapper">
+    <!-- Header -->
+    <div class="theater-header">
+      <div class="container">
+        <div class="row">
+          <div class="header-wrapper">
+            <div class="col-4 px-3">
+              <a href="#" class="navbar-brand py-0">
+                <img src="./assets/img/cinema.png" width="54" height="54">
+                楽シネマ
+              </a>
+            </div>
+
+            <div class="col-8 px-3 d-flex justify-content-between">
+              <div class="header-search">
+                <input type="text" class="search-input" placeholder="作品名で探す">
+                <i class="fa fa-search search-icon" aria-hidden="true"></i>
+              </div>
+
+              <div class="header-login">
+                <i class="fa fa-user user-icon" aria-hidden="true"></i>
+                ログイン
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Header end -->
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-sm p-0">
+      <div class="container-fluid">
+        <div class="container px-3">
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarID"
+            aria-controls="navbarID" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarID">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#ticketModal">チケット購入</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#ranking">映画ランキング</a>
+              </li>
+              <li class="nav-item" id="submenu-1">
+                <a class="nav-link" href="#movies">
+                  上映一覧
+                  <i class="fa fa-angle-down" aria-hidden="true"></i>
+                </a>
+                <!-- Submenu -->
+                <div class="sub-menu-pc">
+                  <div class="sub-menu-pc-wrapper">
+                    <div class="row submenu-title">
+                      <div class="col-sm-12">
+                        <h5><a href="#">上映中</a></h5>
+                      </div>
+                    </div>
+                    <div class="row movies-group-header">
+                      <div class="col-sm-3">
+                        <div class="movie-bg-wrap"
+                          style="background: url(./assets/img/movie-1.jpg) no-repeat center/cover;">
+                          <a href="#" class="movie-ticket-btn white-btn">予約</a>
+                        </div>
+                        <div class="movie-title">
+                          <h5 class="movie-title__heading">「鬼滅の刃」無限列車編</h5>
+                          <p class="movie-title__sub">Kimetsu no Yaiba: Mugen Ressha-hen</p>
+                        </div>
+                      </div>
+                      <div class="col-sm-3">
+                        <div class="movie-bg-wrap"
+                          style="background: url(./assets/img/movie-2.jpg) no-repeat center/cover;">
+                          <a href="#" class="movie-ticket-btn white-btn">予約</a>
+                        </div>
+                        <div class="movie-title">
+                          <h5 class="movie-title__heading">東京リベンジャーズ</h5>
+                          <p class="movie-title__sub">Tokyo Revengers</p>
+                        </div>
+                      </div>
+                      <div class="col-sm-3">
+                        <div class="movie-bg-wrap"
+                          style="background: url(./assets/img/movie-3.png) no-repeat center/cover;">
+                          <a href="#" class="movie-ticket-btn white-btn">予約</a>
+                        </div>
+                        <div class="movie-title">
+                          <h5 class="movie-title__heading">るろうに剣心 最終章 The Final</h5>
+                          <p class="movie-title__sub">Rurouni Kenshin: The Final</p>
+                        </div>
+                      </div>
+                      <div class="col-sm-3">
+                        <div class="movie-bg-wrap"
+                          style="background: url(./assets/img/movie-4.jpg) no-repeat center/cover;">
+                          <a href="#" class="movie-ticket-btn white-btn">予約</a>
+                        </div>
+                        <div class="movie-title">
+                          <h5 class="movie-title__heading">銀魂 THE FINAL</h5>
+                          <p class="movie-title__sub">Gintama: The Very Final</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row submenu-title">
+                      <div class="col-sm-12">
+                        <h5><a href="#">公開予定</a></h5>
+                      </div>
+                    </div>
+                    <div class="row movies-group-header">
+                      <div class="col-sm-3">
+                        <div class="movie-bg-wrap"
+                          style="background: url(./assets/img/movie-5.jpg) no-repeat center/cover;">
+                          <a href="#" class="movie-ticket-btn white-btn">予約</a>
+                        </div>
+                        <div class="movie-title">
+                          <h5 class="movie-title__heading"> STAND BY ME ドラえもん2</h5>
+                          <p class="movie-title__sub">Stand by Me Doraemon 2</p>
+                        </div>
+                      </div>
+                      <div class="col-sm-3">
+                        <div class="movie-bg-wrap"
+                          style="background: url(./assets/img/movie-6.png) no-repeat center/cover;">
+                          <a href="#" class="movie-ticket-btn white-btn">予約</a>
+                        </div>
+                        <div class="movie-title">
+                          <h5 class="movie-title__heading">今日から俺は!! </h5>
+                          <p class="movie-title__sub">Kyou Kara Ore wa!!</p>
+                        </div>
+                      </div>
+                      <div class="col-sm-3">
+                        <div class="movie-bg-wrap"
+                          style="background: url(./assets/img/movie-7.jpg) no-repeat center/cover;">
+                          <a href="#" class="movie-ticket-btn white-btn">予約</a>
+                        </div>
+                        <div class="movie-title">
+                          <h5 class="movie-title__heading">TENET テネット</h5>
+                          <p class="movie-title__sub">TENET</p>
+                        </div>
+                      </div>
+                      <div class="col-sm-3">
+                        <div class="movie-bg-wrap"
+                          style="background: url(./assets/img/movie-8.jpg) no-repeat center/cover;">
+                          <a href="#" class="movie-ticket-btn white-btn">予約</a>
+                        </div>
+                        <div class="movie-title">
+                          <h5 class="movie-title__heading">るろうに剣心 最終章 The Beginning</h5>
+                          <p class="movie-title__sub">Rurouni Kenshin: The Beginning</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Submenu end -->
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#infomation">お知らせ</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#contact">お問合せ</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- Navigation end  -->
+    <div class="main">
+      <!-- Carousel -->
+      <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+            aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+            aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+            aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active" style="background:url(./assets/img/carousel-1.jpg) no-repeat center/cover;">
+            <a href="" class="play-back-btn" data-bs-toggle="modal" data-bs-target="#trailerModal"
+              data-bs-whatever="https://www.youtube.com/embed/-ewm56D9DzY"></a>
+          </div>
+          <div class="carousel-item" style="background:url(./assets/img/carousel-2.jpg) no-repeat center/cover;">
+            <a href="" class="play-back-btn" data-bs-toggle="modal" data-bs-target="#trailerModal"
+              data-bs-whatever="https://www.youtube.com/embed/x_me3xsvDgk"></a>
+          </div>
+          <div class="carousel-item" style="background:url(./assets/img/carousel-3.png) no-repeat center/cover;">
+            <a href="" class="play-back-btn" data-bs-toggle="modal" data-bs-target="#trailerModal"
+              data-bs-whatever="https://www.youtube.com/embed/Y8TqErI0v80"></a>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+          data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+          data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+      <!-- Carousel end -->
+      <!-- Ranking -->
+      <section class="ranking section-padding" id="ranking">
+        <div class="container-xl">
+          <div class="heading px-3 mb-3 mx-3">
+            <h6 class="heading-ja">映画ランキング</h6>
+            <h6 class="heading-en">Ranking</h6>
+          </div>
+          <div class="rank">
+            <div class="rank-item">
+              <div class="rank-item__img-wrapper">
+                <img
+                  src="./assets/img/movie-1.jpg"
+                  class="rank-item__img">
+              </div>
+              <div class="rank-item__title">
+                <span class="rank-title rank-title--ranking"><i class="rank-icon rank-icon--one fas fa-crown"></i><span
+                    class="rank-num">1</span></span>
+                <span class="rank-title rank-title--name">「鬼滅の刃」無限列車編</span>
+              </div>
+            </div>
+            <div class="rank-item">
+              <div class="rank-item__img-wrapper">
+                <img
+                  src="./assets/img/movie-2.jpg"
+                  class="rank-item__img">
+              </div>
+              <div class="rank-item__title">
+                <span class="rank-title rank-title--ranking"><i class="rank-icon rank-icon--two fas fa-crown"></i><span
+                    class="rank-num">2</span></span>
+
+                <span class="rank-title rank-title--name">東京リベンジャーズ</span>
+              </div>
+            </div>
+            <div class="rank-item">
+              <div class="rank-item__img-wrapper">
+                <img
+                  src="./assets/img/movie-3.png"
+                  class="rank-item__img">
+              </div>
+              <div class="rank-item__title">
+                <span class="rank-title rank-title--ranking"><i class="rank-icon fas fa-crown"></i><span
+                    class="rank-num">3</span></span>
+
+                <span class="rank-title rank-title--name">るろうに剣心 最終章 The Final</span>
+              </div>
+            </div>
+            <div class="rank-item">
+              <div class="rank-item__img-wrapper">
+                <img
+                  src="./assets/img/movie-4.jpg"
+                  class="rank-item__img">
+              </div>
+              <div class="rank-item__title">
+                <span class="rank-title rank-title--ranking"><i class="rank-icon fas fa-crown"></i><span
+                    class="rank-num">4</span></span>
+
+                <span class="rank-title rank-title--name">銀魂 THE FINAL</span>
+              </div>
+            </div>
+            <div class="rank-item">
+              <div class="rank-item__img-wrapper">
+                <img
+                  src="./assets/img/movie-5.jpg"
+                  class="rank-item__img">
+              </div>
+              <div class="rank-item__title">
+                <span class="rank-title rank-title--ranking"><i class="rank-icon fas fa-crown"></i><span
+                    class="rank-num">5</span></span>
+
+                <span class="rank-title rank-title--name">STAND BY ME ドラえもん2</span>
+              </div>
+            </div>
+            <div class="rank-item">
+              <div class="rank-item__img-wrapper">
+                <img
+                  src="./assets/img/movie-6.png"
+                  class="rank-item__img">
+              </div>
+              <div class="rank-item__title">
+                <span class="rank-title rank-title--ranking"><i class="rank-icon fas fa-crown"></i><span
+                    class="rank-num">6</span></span>
+
+                <span class="rank-title rank-title--name">今日から俺は!! </span>
+              </div>
+            </div>
+            <div class="rank-item">
+              <div class="rank-item__img-wrapper">
+                <img
+                  src="./assets/img/movie-7.jpg"
+                  class="rank-item__img">
+              </div>
+              <div class="rank-item__title">
+                <span class="rank-title rank-title--ranking"><i class="rank-icon fas fa-crown"></i><span
+                    class="rank-num">7</span></span>
+
+                <span class="rank-title rank-title--name">TENET テネット</span>
+              </div>
+            </div>
+            <div class="rank-item">
+              <div class="rank-item__img-wrapper">
+                <img
+                  src="./assets/img/movie-8.jpg"
+                  class="rank-item__img">
+              </div>
+              <div class="rank-item__title">
+                <span class="rank-title rank-title--ranking"><i class="rank-icon fas fa-crown"></i><span
+                    class="rank-num">8</span></span>
+
+                <span class="rank-title rank-title--name">るろうに剣心 最終章 The Beginning</span>
+              </div>
+            </div>
+            <div class="rank-item">
+              <div class="rank-item__img-wrapper">
+                <img
+                  src="./assets/img/movie-9.jpg"
+                  class="rank-item__img">
+              </div>
+              <div class="rank-item__title">
+                <span class="rank-title rank-title--ranking"><i class="rank-icon fas fa-crown"></i><span
+                    class="rank-num">9</span></span>
+
+                <span class="rank-title rank-title--name">ONE PIECE STAMPEDE</span>
+              </div>
+            </div>
+            <div class="rank-item">
+              <div class="rank-item__img-wrapper">
+                <img
+                  src="./assets/img/movie-10.jpg"
+                  class="rank-item__img">
+              </div>
+              <div class="rank-item__title">
+                <span class="rank-title rank-title--ranking"><i class="rank-icon fas fa-crown"></i><span
+                    class="rank-num">10</span></span>
+
+                <span class="rank-title rank-title--name">アナと雪の女王2</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="infomation section-padding" id="movies">
+        <div class="container-xl">
+          <div class="heading px-3 mb-3 mx-3">
+            <h6 class="heading-ja">上映中作品</h6>
+            <h6 class="heading-en">Now Playing</h6>
+          </div>
+          <div class="row movies-tab g-3">
+            <div class="col-lg-4 col-md-6 col-sm-12">
+              <div class="movie-bg-wrap"
+                style="background: url(./assets/img/movie-1.jpg) no-repeat center/cover;">
+                <a href="#" class="movie-ticket-btn white-btn">予約</a>
+              </div>
+              <div class="movie-title">
+                <h5 class="movie-title__heading">「鬼滅の刃」無限列車編</h5>
+                <p class="movie-title__sub">Kimetsu no Yaiba: Mugen Ressha-hen</p>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12">
+              <div class="movie-bg-wrap"
+                style="background: url(./assets/img/movie-2.jpg) no-repeat center/cover;">
+                <a href="#" class="movie-ticket-btn white-btn">予約</a>
+              </div>
+              <div class="movie-title">
+                <h5 class="movie-title__heading"> 東京リベンジャーズ</h5>
+                <p class="movie-title__sub">Tokyo Revengers</p>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12">
+              <div class="movie-bg-wrap"
+                style="background: url(./assets/img/movie-3.png) no-repeat center/cover;">
+                <a href="#" class="movie-ticket-btn white-btn">予約</a>
+              </div>
+              <div class="movie-title">
+                <h5 class="movie-title__heading">るろうに剣心 最終章 The Final</h5>
+                <p class="movie-title__sub">Rurouni Kenshin: The Final</p>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12">
+              <div class="movie-bg-wrap"
+                style="background: url(./assets/img/movie-4.jpg) no-repeat center/cover;">
+                <a href="#" class="movie-ticket-btn white-btn">予約</a>
+              </div>
+              <div class="movie-title">
+                <h5 class="movie-title__heading">銀魂 THE FINAL</h5>
+                <p class="movie-title__sub">Gintama: The Very Final</p>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12">
+              <div class="movie-bg-wrap"
+                style="background: url(./assets/img/movie-5.jpg) no-repeat center/cover;">
+                <a href="#" class="movie-ticket-btn white-btn">予約</a>
+              </div>
+              <div class="movie-title">
+                <h5 class="movie-title__heading">STAND BY ME ドラえもん2</h5>
+                <p class="movie-title__sub">Stand by Me Doraemon 2</p>
+              </div>
+            </div>
+          </div>
+          <a href="#" class="more-btn mt-3">もっと</a>
+        </div>
+      </section>
+      <section class="infomation section-padding">
+        <div class="container-xl">
+          <div class="heading px-3 mb-3 mx-3">
+            <h6 class="heading-ja">公開予定作品</h6>
+            <h6 class="heading-en">Coming Soon</h6>
+          </div>
+          <div class="row movies-tab g-3">
+            <div class="col-lg-4 col-md-6 col-sm-12">
+              <div class="movie-bg-wrap"
+                style="background: url(./assets/img/movie-6.png) no-repeat center/cover;">
+                <a href="#" class="movie-ticket-btn white-btn">予約</a>
+              </div>
+              <div class="movie-title">
+                <h5 class="movie-title__heading">今日から俺は!! </h5>
+                <p class="movie-title__sub">Kyou Kara Ore wa!!</p>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12">
+              <div class="movie-bg-wrap"
+                style="background: url(./assets/img/movie-7.jpg) no-repeat center/cover;">
+                <a href="#" class="movie-ticket-btn white-btn">予約</a>
+              </div>
+              <div class="movie-title">
+                <h5 class="movie-title__heading">TENET テネット</h5>
+                <p class="movie-title__sub">TENET</p>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12">
+              <div class="movie-bg-wrap"
+                style="background: url(./assets/img/movie-8.jpg) no-repeat center/cover;">
+                <a href="#" class="movie-ticket-btn white-btn">予約</a>
+              </div>
+              <div class="movie-title">
+                <h5 class="movie-title__heading">るろうに剣心 最終章 The Beginning</h5>
+                <p class="movie-title__sub">Rurouni Kenshin: The Beginning</p>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12">
+              <div class="movie-bg-wrap"
+                style="background: url(./assets/img/movie-9.jpg) no-repeat center/cover;">
+                <a href="#" class="movie-ticket-btn white-btn">予約</a>
+              </div>
+              <div class="movie-title">
+                <h5 class="movie-title__heading">ONE PIECE STAMPEDE</h5>
+                <p class="movie-title__sub">One Piece: Stampede</p>
+              </div>
+            </div>
+          </div>
+          <a href="#" class="more-btn mt-3">もっと</a>
+        </div>
+      </section>
+      <section class="infomation section-padding" id="infomation">
+        <div class="container-xl">
+          <div class="heading px-3 mb-3 mx-3">
+            <h6 class="heading-ja">インフォメーション</h6>
+            <h6 class="heading-en">Information</h6>
+          </div>
+          <ul class="info-list">
+            <li class="info-item">
+              <a href="#" class="info-link">＜新型コロナウイルス感染症対策＞全劇場・全座席の消毒について （2021年07月09日）</a>
+            </li>
+            <li class="info-item">
+              <a href="#" class="info-link">新型コロナウイルス感染予防の対応について（2021年07月09日）</a>
+            </li>
+            <li class="info-item">
+              <a href="#" class="info-link">毎週水曜日は「誰でも」オトク　7月14日から“楽ウェンズデイ”スタート（2021年05月19日）</a>
+            </li>
+            <li class="info-item">
+              <a href="#" class="info-link">2021年秋 南大阪エリア最大級の商業施設「セブンパーク天美」に「楽シネマズ セブンパーク天美」が出店（2021年03月31日）</a>
+            </li>
+            <li class="info-item">
+              <a href="#" class="info-link">楽シネマズ 名古屋ベイシティ 閉館のお知らせ（2020年12月01日）</a>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section class="contact section-padding" id="contact">
+        <div class="container-xl">
+          <div class="heading px-3 mb-3 mx-3">
+            <h6 class="heading-ja">お問い合わ</h6>
+            <h6 class="heading-en">Contact</h6>
+          </div>
+          <div class="row justify-content-center mt-3">
+            <div class="col-md-10">
+              <div class="row justify-content-center">
+                <div class="col-md-6">
+                  <h5 class="contact-heading">楽シネマへの<br>
+                    ご意見・ご要望・お問合せ</h5>
+                  <div class="contact-img-wrap">
+                    <img src="./assets/img/contact.png" alt="" class="contact-img img-fluid">
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <form action="">
+                    <div class="row">
+                      <div class="col-md-12 form-group">
+                        <input type="text" class="form-control" placeholder="お名前">
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-12 form-group">
+                        <input type="text" class="form-control" placeholder="メールアドレス">
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-12 form-group">
+                        <input type="text" class="form-control" placeholder="タイトル">
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-12 form-group">
+                        <textarea name="message" id="message" class="form-control" cols="30" rows="7"
+                          placeholder="内容を入力してください"></textarea>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-12">
+                        <button type="submit" class="white-btn rounded-3">確認</button>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container-fluid footer__bottom section-padding">
+        <div class="container text-center">
+          <p class="footer__powered text-white">
+            Copyright ©2021 All rights reserved by <span>ロック</span>
+          </p>
+          <div class="footer__social">
+            <a href="#"> <i class="fab fa-facebook    "></i> </a>
+            <a href="#"> <i class="fab fa-twitch    "></i> </a>
+            <a href="#"> <i class="fab fa-youtube    "></i> </a>
+            <a href="#"> <i class="fab fa-instagram    "></i> </a>
+            <a href="#"> <i class="fab fa-discord    "></i> </a>
+            <a href="#"> <i class="fab fa-reddit    "></i> </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- Video Modal -->
+    <div class="modal px-0 fade" id="trailerModal" tabindex="-1" aria-labelledby="trailerModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-xl modal-dialog-centered">
+        <div class="modal-content">
+          <iframe title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen id="addVideo"></iframe>
+        </div>
+      </div>
+    </div>
+    <!-- Ticket Modal -->
+    <div class="modal fade zoom-in" id="ticketModal" tabindex="-1" aria-labelledby="ticketModalLabel"
+      aria-hidden="true">
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+          <button type="button" class="btn-close btn-lg" data-bs-dismiss="modal" aria-label="Close"></button>
+          <div class="modal-header row m-0 p-0">
+            <div class="col-6 tabs active bg-white" id="tab01">
+              <i class="fas fa-map-marked-alt text-black"></i>
+              <h5 class="text-black">劇場を探す</h5>
+            </div>
+            <div class="col-6 tabs" id="tab02">
+              <i class="fas fa-film"></i>
+              <h5 class="text-white">作品を探す</h5>
+            </div>
+          </div>
+          <div class="modal-body">
+            <fieldset class="show" id="tab011">
+              <div class="bg-light">
+                <form>
+                  <div class="form-group">
+                    <h6 class="form-select-label">劇場</h6>
+                    <select class="form-select" aria-label="Default select example">
+                      <option selected>池袋</option>
+                      <option value="1">新宿</option>
+                      <option value="2">渋谷</option>
+                      <option value="3">上野</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <h6 class="form-select-label">日付</h6>
+                    <select class="form-select" aria-label="Default select example">
+                      <option selected>27/11(土)</option>
+                      <option value="1">28/11(日)</option>
+                      <option value="2">29/11(月)</option>
+                      <option value="3">30/11(火)</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <h6 class="form-select-label">時間</h6>
+                    <select class="form-select" aria-label="Default select example">
+                      <option selected>時間指定なし</option>
+                      <option value="1">~10:00</option>
+                      <option value="2">14:00~15:59</option>
+                      <option value="3">18:00~19:59</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <h6 class="form-select-label">作品</h6>
+                    <select class="form-select" aria-label="Default select example">
+                      <option selected>エターナルズ</option>
+                      <option value="1">恋する寄生虫</option>
+                      <option value="2">ドラえもん</option>
+                      <option value="3">るろうに剣心</option>
+                    </select>
+                  </div>
+                  <div class="form-group d-flex mt-3 justify-content-center">
+                    <button type="submit" class="main-btn">購入</button>
+                  </div>
+                </form>
+              </div>
+            </fieldset>
+
+            <fieldset id="tab021">
+              <div class="bg-light">
+                <form>
+                  <div class="form-group">
+                    <h6 class="form-select-label">作品</h6>
+                    <select class="form-select" aria-label="Default select example">
+                      <option selected>エターナルズ</option>
+                      <option value="1">恋する寄生虫</option>
+                      <option value="2">ドラえもん</option>
+                      <option value="3">るろうに剣心</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <h6 class="form-select-label">劇場</h6>
+                    <select class="form-select" aria-label="Default select example">
+                      <option selected>池袋</option>
+                      <option value="1">新宿</option>
+                      <option value="2">渋谷</option>
+                      <option value="3">上野</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <h6 class="form-select-label">日付</h6>
+                    <select class="form-select" aria-label="Default select example">
+                      <option selected>27/11(土)</option>
+                      <option value="1">28/11(日)</option>
+                      <option value="2">29/11(月)</option>
+                      <option value="3">30/11(火)</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <h6 class="form-select-label">時間</h6>
+                    <select class="form-select" aria-label="Default select example">
+                      <option selected>時間指定なし</option>
+                      <option value="1">~10:00</option>
+                      <option value="2">14:00~15:59</option>
+                      <option value="3">18:00~19:59</option>
+                    </select>
+                  </div>
+
+                  <div class="form-group d-flex mt-3 justify-content-center">
+                    <button type="submit" class="main-btn">購入</button>
+                  </div>
+                </form>
+              </div>
+            </fieldset>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Back to top -->
+    <button type="button" class="btn btn-floating btn-lg back-top-btn" id="back-top" data-aos="fade-up"
+      data-aos-anchor=".infomation" data-aos-once="false">
+      <i class="fas fa-angle-double-up"></i>
+    </button>
+  </div>
+  <!-- JS -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+    integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous">
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+    integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous">
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+    integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-migrate/3.3.2/jquery-migrate.min.js"
+    integrity="sha512-3fMsI1vtU2e/tVxZORSEeuMhXnT9By80xlmXlsOku7hNwZSHJjwcOBpmy+uu+fyWwGCLkMvdVbHkeoXdAzBv+w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="./assets/js/varying-modal.js"></script>
+  <script src="./assets/js/preload.js"></script>
+  <script src="./assets/js/back-top.js"></script>
+  <script src="./assets/js/slow-scroll.js"></script>
+  <script src="./assets/js/multi-tab.js"></script>
+  <script src="./assets/js/slick-slider.js"></script>
+  <script>
+    AOS.init({
+      delay: 100,
+      duration: 1200,
+      easing: 'ease-out',
+      once: true,
+    });
+  </script>
 </body>
+
 </html>

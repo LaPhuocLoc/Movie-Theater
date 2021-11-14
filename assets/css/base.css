@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;500;700;900&family=Signika:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=RocknRoll+One&family=Noto+Sans+JP:wght@300;500;700;900&family=Signika:wght@300;400;500;600;700&display=swap');
 
 *,
 *:before,
@@ -32,7 +32,7 @@ ol {
 }
 
 :root {
-    --primary-color: #528F2D;
+    --primary-color: #f16b38;
     --secondary-color: #151515;
     --third-color: #82B440;
     --white-color: #fff;
@@ -58,7 +58,9 @@ html,
 body {
     overflow-x: hidden;
 }
-
+section {
+    background-color: #f5f5f5;
+}
 /* Custom CSS Design */
 h1 {
     font-size: 3rem;
@@ -89,10 +91,14 @@ h5 {
     font-weight: 700;
     font-size: 1rem;
     text-transform: capitalize;
-    font-family: var(--secondary-font);
+    font-family: var(--primary-font);
     color: var(--primary-color);
     margin-bottom: 0.5rem;
 
+}
+
+h6 {
+    font-family: var(--primary-font);
 }
 
 p {
@@ -102,8 +108,22 @@ p {
     line-height: 1.75rem;
 }
 
+a {
+    text-decoration: none !important;
+}
+
+a:focus {
+    color: var(--primary-color) !important;
+}
+
 .section-padding {
-    padding: 100px 0 !important;
+    padding: 50px 0 !important;
+}
+
+select:focus {
+    outline: none !important;
+    box-shadow: none !important;
+    border-color: var(--primary-color) !important;
 }
 
 .main-btn {
@@ -184,7 +204,7 @@ p {
     width: 48px;
     height: 48px;
     transition: all .3s ease;
-    background: rgba(83, 143, 45, 0.5);
+    background: var(--primary-color) !important;
     z-index: -1;
 }
 
@@ -215,11 +235,11 @@ p {
     right: 20px;
     bottom: 20px;
     color: var(--white-color);
-    box-shadow: 0 0 3px #555!important;
+    box-shadow: 0 0 3px #555 !important;
     transition: all .4s ease-out 0s;
     z-index: 999999;
-    display:none;
 }
+
 .back-top-btn:hover {
     color: var(--primary-color);
 }
