@@ -1,10 +1,10 @@
 /* Header */
+.theater-header {
+    position: relative;
+}
 .header-wrapper {
-    height: 5rem;
-    display: flex;
     align-items: center;
 }
-
 .navbar-brand {
     display: inline-flex;
     align-items: center;
@@ -65,23 +65,44 @@
 .user-icon {
     margin-right: .5rem;
 }
-
+/* Mobile nav */
+.navbar-toggler {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 5%;
+}
+.navbar-toggler i {
+    font-size: 2rem;
+}
+.offcanvas-header h5 {
+    font-size: 1.5rem!important;
+}
+.offcanvas-body .nav-item {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+.offcanvas-body .nav-link {
+    color: black;
+    display: flex;
+    justify-content: space-between;
+    padding: 32px 0;
+}
 /* Navbar */
-.navbar {
+.pc-nav {
     background-color: var(--black-color);
 }
 
-.navbar-nav {
+.pc-nav .navbar-nav {
     margin: 0 auto;
 }
 
-.navbar-nav li {
+.pc-nav .navbar-nav li {
     position: relative;
     height: 3.125rem;
     min-width: 10rem;
 }
 
-.navbar-nav li:not(:last-child)::after {
+.pc-nav .navbar-nav li:not(:last-child)::after {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -94,7 +115,7 @@
     z-index: 10;
 }
 
-.navbar-nav li>a {
+.pc-nav .navbar-nav li>a {
     display: block;
     height: 100%;
     line-height: 3.125rem;
@@ -104,17 +125,17 @@
     transition: all .3s ease-out 0s;
 }
 
-.navbar-nav li a i {
+.pc-nav .navbar-nav li a i {
     font-size: .875rem;
     margin-left: 4px;
 }
 
 /* Submenu */
-#submenu-1:hover .sub-menu-pc {
+.pc-nav #submenu-1:hover .sub-menu-pc {
     display: block;
 }
 
-.sub-menu-pc {
+.pc-nav .sub-menu-pc {
     position: absolute;
     top: 100%;
     left: -300%;
@@ -125,11 +146,11 @@
     z-index: 999999;
 }
 
-.submenu-title h5 {
+.pc-nav .submenu-title h5 {
     line-height: 2.25rem;
 }
 
-.submenu-title h5 a {
+.pc-nav .submenu-title h5 a {
     position: relative;
     display: inline-block;
     color: var(--white-color) !important;
@@ -138,7 +159,7 @@
     line-height: 2.25rem;
 }
 
-.submenu-title h5 a::after {
+.pc-nav .submenu-title h5 a::after {
     position: absolute;
     top: 100%;
     left: 0;
