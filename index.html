@@ -17,6 +17,20 @@
   <link rel="stylesheet" href="./assets/css/main.css">
   <link rel="stylesheet" href="./assets/css/responsive-main.css">
   <link rel="stylesheet" href="./assets/css/loader.css">
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+    integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous">
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+    integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous">
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+    integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-migrate/3.3.2/jquery-migrate.min.js"
+    integrity="sha512-3fMsI1vtU2e/tVxZORSEeuMhXnT9By80xlmXlsOku7hNwZSHJjwcOBpmy+uu+fyWwGCLkMvdVbHkeoXdAzBv+w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 </head>
 
 <body>
@@ -525,20 +539,21 @@
                   </div>
                 </div>
                 <div class="col-md-6">
-                  <form action="">
+                  <form class="needs-validation" novalidate>
                     <div class="row">
                       <div class="col-md-12 form-group">
-                        <input type="text" class="form-control" placeholder="お名前">
+                        <input type="text" class="form-control" placeholder="お名前" required>
+                        <div class="invalid-feedback">More example invalid feedback text</div>
                       </div>
                     </div>
                     <div class="row">
                       <div class="col-md-12 form-group">
-                        <input type="text" class="form-control" placeholder="メールアドレス">
+                        <input type="text" class="form-control" placeholder="メールアドレス" required>
                       </div>
                     </div>
                     <div class="row">
                       <div class="col-md-12 form-group">
-                        <input type="text" class="form-control" placeholder="タイトル">
+                        <input type="text" class="form-control" placeholder="タイトル" required>
                       </div>
                     </div>
                     <div class="row">
@@ -708,26 +723,14 @@
     </button>
   </div>
   <!-- JS -->
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
-    integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous">
-  </script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
-    integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous">
-  </script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
-    integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
-    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-migrate/3.3.2/jquery-migrate.min.js"
-    integrity="sha512-3fMsI1vtU2e/tVxZORSEeuMhXnT9By80xlmXlsOku7hNwZSHJjwcOBpmy+uu+fyWwGCLkMvdVbHkeoXdAzBv+w=="
-    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  
   <script src="./assets/js/varying-modal.js"></script>
   <script src="./assets/js/preload.js"></script>
   <script src="./assets/js/back-top.js"></script>
   <script src="./assets/js/slow-scroll.js"></script>
   <script src="./assets/js/multi-tab.js"></script>
   <script src="./assets/js/slick-slider.js"></script>
+  <script src="./assets/js/validation.js"></script>
   <script>
     AOS.init({
       delay: 100,
