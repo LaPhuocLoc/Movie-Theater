@@ -2,27 +2,28 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Movie Theater</title>
   <!--  Css -->
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
-    integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
   <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
   <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
-  <link rel="stylesheet" href="./assets/css/base.css">
-  <link rel="stylesheet" href="./assets/css/main.css">
-  <link rel="stylesheet" href="./assets/css/responsive-main.css">
-  <link rel="stylesheet" href="./assets/css/loader.css">
+  <link rel="stylesheet" href="./assets/css/base.css" />
+  <link rel="stylesheet" href="./assets/css/main.css" />
+  <link rel="stylesheet" href="./assets/css/responsive-main.css" />
+  <link rel="stylesheet" href="./assets/css/loader.css" />
+
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
-    integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous">
-  </script>
+    integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
+    crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
-    integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous">
-  </script>
+    integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+    crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
     integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
@@ -87,20 +88,24 @@
         <div class="row header-wrapper">
           <div class="col-lg-4 px-3 navbar-brand-wrap">
             <a href="#" class="navbar-brand py-0">
-              <img src="./assets/img/cinema.png" width="54" height="54">
+              <img src="./assets/img/cinema.png" width="54" height="54" />
               楽シネマ
             </a>
           </div>
 
           <div class="col-lg-8 px-3 d-flex justify-content-between">
             <div class="header-search">
-              <input type="text" class="search-input" placeholder="作品名で探す">
+              <input type="text" class="search-input" placeholder="作品名で探す" />
               <i class="fa fa-search search-icon" aria-hidden="true"></i>
+              <div class="header-search_result">
+                <ul class="list-search">
+                  
+                </ul>
+              </div>
             </div>
 
             <div class="header-login">
-              <i class="fa fa-user user-icon" aria-hidden="true"></i>
-              ログイン
+              <i class="fa fa-user user-icon" aria-hidden="true"></i> ログイン
             </div>
           </div>
         </div>
@@ -132,77 +137,40 @@
                         <h5><a href="#">上映中</a></h5>
                       </div>
                     </div>
-                    <div class="row movies-group-header">
+                    <div class="row movies-group-header" id="playing-movies-menu">
                       <div class="col-sm-3">
-                        <div class="movie-bg-wrap"
-                          style="background: url(./assets/img/movie-1.jpg) no-repeat center/cover;">
+                        <div class="movie-bg-wrap" style="
+                              background: url(./assets/img/movie-1.jpg)
+                                no-repeat center/cover;
+                            ">
                           <a href="#" class="movie-ticket-btn white-btn">予約</a>
                         </div>
                         <div class="movie-title">
-                          <h5 class="movie-title__heading">「鬼滅の刃」無限列車編</h5>
-                          <p class="movie-title__sub">Kimetsu no Yaiba: Mugen Ressha-hen</p>
+                          <h5 class="movie-title__heading">
+                            STAND BY ME ドラえもん2
+                          </h5>
+                          <p class="movie-title__sub">
+                            Stand by Me Doraemon 2
+                          </p>
                         </div>
                       </div>
                       <div class="col-sm-3">
-                        <div class="movie-bg-wrap"
-                          style="background: url(./assets/img/movie-2.jpg) no-repeat center/cover;">
+                        <div class="movie-bg-wrap" style="
+                              background: url(./assets/img/movie-2.jpg)
+                                no-repeat center/cover;
+                            ">
                           <a href="#" class="movie-ticket-btn white-btn">予約</a>
                         </div>
                         <div class="movie-title">
-                          <h5 class="movie-title__heading">東京リベンジャーズ</h5>
-                          <p class="movie-title__sub">Tokyo Revengers</p>
-                        </div>
-                      </div>
-                      <div class="col-sm-3">
-                        <div class="movie-bg-wrap"
-                          style="background: url(./assets/img/movie-3.png) no-repeat center/cover;">
-                          <a href="#" class="movie-ticket-btn white-btn">予約</a>
-                        </div>
-                        <div class="movie-title">
-                          <h5 class="movie-title__heading">るろうに剣心 最終章 The Final</h5>
-                          <p class="movie-title__sub">Rurouni Kenshin: The Final</p>
-                        </div>
-                      </div>
-                      <div class="col-sm-3">
-                        <div class="movie-bg-wrap"
-                          style="background: url(./assets/img/movie-4.jpg) no-repeat center/cover;">
-                          <a href="#" class="movie-ticket-btn white-btn">予約</a>
-                        </div>
-                        <div class="movie-title">
-                          <h5 class="movie-title__heading">銀魂 THE FINAL</h5>
-                          <p class="movie-title__sub">Gintama: The Very Final</p>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="row submenu-title">
-                      <div class="col-sm-12">
-                        <h5><a href="#">公開予定</a></h5>
-                      </div>
-                    </div>
-                    <div class="row movies-group-header">
-                      <div class="col-sm-3">
-                        <div class="movie-bg-wrap"
-                          style="background: url(./assets/img/movie-5.jpg) no-repeat center/cover;">
-                          <a href="#" class="movie-ticket-btn white-btn">予約</a>
-                        </div>
-                        <div class="movie-title">
-                          <h5 class="movie-title__heading"> STAND BY ME ドラえもん2</h5>
-                          <p class="movie-title__sub">Stand by Me Doraemon 2</p>
-                        </div>
-                      </div>
-                      <div class="col-sm-3">
-                        <div class="movie-bg-wrap"
-                          style="background: url(./assets/img/movie-6.png) no-repeat center/cover;">
-                          <a href="#" class="movie-ticket-btn white-btn">予約</a>
-                        </div>
-                        <div class="movie-title">
-                          <h5 class="movie-title__heading">今日から俺は!! </h5>
+                          <h5 class="movie-title__heading">今日から俺は!!</h5>
                           <p class="movie-title__sub">Kyou Kara Ore wa!!</p>
                         </div>
                       </div>
                       <div class="col-sm-3">
-                        <div class="movie-bg-wrap"
-                          style="background: url(./assets/img/movie-7.jpg) no-repeat center/cover;">
+                        <div class="movie-bg-wrap" style="
+                              background: url(./assets/img/movie-3.png)
+                                no-repeat center/cover;
+                            ">
                           <a href="#" class="movie-ticket-btn white-btn">予約</a>
                         </div>
                         <div class="movie-title">
@@ -211,13 +179,83 @@
                         </div>
                       </div>
                       <div class="col-sm-3">
-                        <div class="movie-bg-wrap"
-                          style="background: url(./assets/img/movie-8.jpg) no-repeat center/cover;">
+                        <div class="movie-bg-wrap" style="
+                              background: url(./assets/img/movie-4.jpg)
+                                no-repeat center/cover;
+                            ">
                           <a href="#" class="movie-ticket-btn white-btn">予約</a>
                         </div>
                         <div class="movie-title">
-                          <h5 class="movie-title__heading">るろうに剣心 最終章 The Beginning</h5>
-                          <p class="movie-title__sub">Rurouni Kenshin: The Beginning</p>
+                          <h5 class="movie-title__heading">
+                            るろうに剣心 最終章 The Beginning
+                          </h5>
+                          <p class="movie-title__sub">
+                            Rurouni Kenshin: The Beginning
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="row submenu-title">
+                      <div class="col-sm-12">
+                        <h5><a href="#">公開予定</a></h5>
+                      </div>
+                    </div>
+                    <div class="row movies-group-header" id="coming-movies-menu">
+                      <div class="col-sm-3">
+                        <div class="movie-bg-wrap" style="
+                              background: url(./assets/img/movie-5.jpg)
+                                no-repeat center/cover;
+                            ">
+                          <a href="#" class="movie-ticket-btn white-btn">予約</a>
+                        </div>
+                        <div class="movie-title">
+                          <h5 class="movie-title__heading">
+                            STAND BY ME ドラえもん2
+                          </h5>
+                          <p class="movie-title__sub">
+                            Stand by Me Doraemon 2
+                          </p>
+                        </div>
+                      </div>
+                      <div class="col-sm-3">
+                        <div class="movie-bg-wrap" style="
+                              background: url(./assets/img/movie-6.png)
+                                no-repeat center/cover;
+                            ">
+                          <a href="#" class="movie-ticket-btn white-btn">予約</a>
+                        </div>
+                        <div class="movie-title">
+                          <h5 class="movie-title__heading">今日から俺は!!</h5>
+                          <p class="movie-title__sub">Kyou Kara Ore wa!!</p>
+                        </div>
+                      </div>
+                      <div class="col-sm-3">
+                        <div class="movie-bg-wrap" style="
+                              background: url(./assets/img/movie-7.jpg)
+                                no-repeat center/cover;
+                            ">
+                          <a href="#" class="movie-ticket-btn white-btn">予約</a>
+                        </div>
+                        <div class="movie-title">
+                          <h5 class="movie-title__heading">TENET テネット</h5>
+                          <p class="movie-title__sub">TENET</p>
+                        </div>
+                      </div>
+                      <div class="col-sm-3">
+                        <div class="movie-bg-wrap" style="
+                              background: url(./assets/img/movie-8.jpg)
+                                no-repeat center/cover;
+                            ">
+                          <a href="#" class="movie-ticket-btn white-btn">予約</a>
+                        </div>
+                        <div class="movie-title">
+                          <h5 class="movie-title__heading">
+                            るろうに剣心 最終章 The Beginning
+                          </h5>
+                          <p class="movie-title__sub">
+                            Rurouni Kenshin: The Beginning
+                          </p>
                         </div>
                       </div>
                     </div>
@@ -248,20 +286,7 @@
           <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
             aria-label="Slide 3"></button>
         </div>
-        <div class="carousel-inner">
-          <div class="carousel-item active" style="background:url(./assets/img/carousel-1.jpg) no-repeat center/cover;">
-            <a href="" class="play-back-btn" data-bs-toggle="modal" data-bs-target="#trailerModal"
-              data-bs-whatever="https://www.youtube.com/embed/-ewm56D9DzY"></a>
-          </div>
-          <div class="carousel-item" style="background:url(./assets/img/carousel-2.jpg) no-repeat center/cover;">
-            <a href="" class="play-back-btn" data-bs-toggle="modal" data-bs-target="#trailerModal"
-              data-bs-whatever="https://www.youtube.com/embed/x_me3xsvDgk"></a>
-          </div>
-          <div class="carousel-item" style="background:url(./assets/img/carousel-3.png) no-repeat center/cover;">
-            <a href="" class="play-back-btn" data-bs-toggle="modal" data-bs-target="#trailerModal"
-              data-bs-whatever="https://www.youtube.com/embed/Y8TqErI0v80"></a>
-          </div>
-        </div>
+        <div class="carousel-inner"></div>
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
           data-bs-slide="prev">
           <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -281,172 +306,16 @@
             <h6 class="heading-ja">映画ランキング</h6>
             <h6 class="heading-en">Ranking</h6>
           </div>
-          <div class="rank">
-            <div class="rank-item">
-              <div class="rank-item__img-wrapper">
-                <img src="./assets/img/movie-1.jpg" class="rank-item__img">
-              </div>
-              <div class="rank-item__title">
-                <span class="rank-title rank-title--ranking"><i class="rank-icon rank-icon--one fas fa-crown"></i><span
-                    class="rank-num">1</span></span>
-                <span class="rank-title rank-title--name">「鬼滅の刃」無限列車編</span>
-              </div>
-            </div>
-            <div class="rank-item">
-              <div class="rank-item__img-wrapper">
-                <img src="./assets/img/movie-2.jpg" class="rank-item__img">
-              </div>
-              <div class="rank-item__title">
-                <span class="rank-title rank-title--ranking"><i class="rank-icon rank-icon--two fas fa-crown"></i><span
-                    class="rank-num">2</span></span>
-
-                <span class="rank-title rank-title--name">東京リベンジャーズ</span>
-              </div>
-            </div>
-            <div class="rank-item">
-              <div class="rank-item__img-wrapper">
-                <img src="./assets/img/movie-3.png" class="rank-item__img">
-              </div>
-              <div class="rank-item__title">
-                <span class="rank-title rank-title--ranking"><i class="rank-icon fas fa-crown"></i><span
-                    class="rank-num">3</span></span>
-
-                <span class="rank-title rank-title--name">るろうに剣心 最終章 The Final</span>
-              </div>
-            </div>
-            <div class="rank-item">
-              <div class="rank-item__img-wrapper">
-                <img src="./assets/img/movie-4.jpg" class="rank-item__img">
-              </div>
-              <div class="rank-item__title">
-                <span class="rank-title rank-title--ranking"><i class="rank-icon fas fa-crown"></i><span
-                    class="rank-num">4</span></span>
-
-                <span class="rank-title rank-title--name">銀魂 THE FINAL</span>
-              </div>
-            </div>
-            <div class="rank-item">
-              <div class="rank-item__img-wrapper">
-                <img src="./assets/img/movie-5.jpg" class="rank-item__img">
-              </div>
-              <div class="rank-item__title">
-                <span class="rank-title rank-title--ranking"><i class="rank-icon fas fa-crown"></i><span
-                    class="rank-num">5</span></span>
-
-                <span class="rank-title rank-title--name">STAND BY ME ドラえもん2</span>
-              </div>
-            </div>
-            <div class="rank-item">
-              <div class="rank-item__img-wrapper">
-                <img src="./assets/img/movie-6.png" class="rank-item__img">
-              </div>
-              <div class="rank-item__title">
-                <span class="rank-title rank-title--ranking"><i class="rank-icon fas fa-crown"></i><span
-                    class="rank-num">6</span></span>
-
-                <span class="rank-title rank-title--name">今日から俺は!! </span>
-              </div>
-            </div>
-            <div class="rank-item">
-              <div class="rank-item__img-wrapper">
-                <img src="./assets/img/movie-7.jpg" class="rank-item__img">
-              </div>
-              <div class="rank-item__title">
-                <span class="rank-title rank-title--ranking"><i class="rank-icon fas fa-crown"></i><span
-                    class="rank-num">7</span></span>
-
-                <span class="rank-title rank-title--name">TENET テネット</span>
-              </div>
-            </div>
-            <div class="rank-item">
-              <div class="rank-item__img-wrapper">
-                <img src="./assets/img/movie-8.jpg" class="rank-item__img">
-              </div>
-              <div class="rank-item__title">
-                <span class="rank-title rank-title--ranking"><i class="rank-icon fas fa-crown"></i><span
-                    class="rank-num">8</span></span>
-
-                <span class="rank-title rank-title--name">るろうに剣心 最終章 The Beginning</span>
-              </div>
-            </div>
-            <div class="rank-item">
-              <div class="rank-item__img-wrapper">
-                <img src="./assets/img/movie-9.jpg" class="rank-item__img">
-              </div>
-              <div class="rank-item__title">
-                <span class="rank-title rank-title--ranking"><i class="rank-icon fas fa-crown"></i><span
-                    class="rank-num">9</span></span>
-
-                <span class="rank-title rank-title--name">ONE PIECE STAMPEDE</span>
-              </div>
-            </div>
-            <div class="rank-item">
-              <div class="rank-item__img-wrapper">
-                <img src="./assets/img/movie-10.jpg" class="rank-item__img">
-              </div>
-              <div class="rank-item__title">
-                <span class="rank-title rank-title--ranking"><i class="rank-icon fas fa-crown"></i><span
-                    class="rank-num">10</span></span>
-
-                <span class="rank-title rank-title--name">アナと雪の女王2</span>
-              </div>
-            </div>
-          </div>
+          <div class="rank" id="rank"></div>
         </div>
       </section>
-      <section class="infomation section-padding" id="movies"  data-aos="fade-up">
+      <section class="infomation section-padding" id="movies" data-aos="fade-up">
         <div class="container-xl">
           <div class="heading px-3 mb-3 mx-3">
             <h6 class="heading-ja">上映中作品</h6>
             <h6 class="heading-en">Now Playing</h6>
           </div>
-          <div class="row movies-tab g-3">
-            <div class="col-lg-4 col-md-6 col-sm-12">
-              <div class="movie-bg-wrap" style="background: url(./assets/img/movie-1.jpg) no-repeat center/cover;">
-                <a href="#" class="movie-ticket-btn white-btn">予約</a>
-              </div>
-              <div class="movie-title">
-                <h5 class="movie-title__heading">「鬼滅の刃」無限列車編</h5>
-                <p class="movie-title__sub">Kimetsu no Yaiba: Mugen Ressha-hen</p>
-              </div>
-            </div>
-            <div class="col-lg-4 col-md-6 col-sm-12">
-              <div class="movie-bg-wrap" style="background: url(./assets/img/movie-2.jpg) no-repeat center/cover;">
-                <a href="#" class="movie-ticket-btn white-btn">予約</a>
-              </div>
-              <div class="movie-title">
-                <h5 class="movie-title__heading"> 東京リベンジャーズ</h5>
-                <p class="movie-title__sub">Tokyo Revengers</p>
-              </div>
-            </div>
-            <div class="col-lg-4 col-md-6 col-sm-12">
-              <div class="movie-bg-wrap" style="background: url(./assets/img/movie-3.png) no-repeat center/cover;">
-                <a href="#" class="movie-ticket-btn white-btn">予約</a>
-              </div>
-              <div class="movie-title">
-                <h5 class="movie-title__heading">るろうに剣心 最終章 The Final</h5>
-                <p class="movie-title__sub">Rurouni Kenshin: The Final</p>
-              </div>
-            </div>
-            <div class="col-lg-4 col-md-6 col-sm-12">
-              <div class="movie-bg-wrap" style="background: url(./assets/img/movie-4.jpg) no-repeat center/cover;">
-                <a href="#" class="movie-ticket-btn white-btn">予約</a>
-              </div>
-              <div class="movie-title">
-                <h5 class="movie-title__heading">銀魂 THE FINAL</h5>
-                <p class="movie-title__sub">Gintama: The Very Final</p>
-              </div>
-            </div>
-            <div class="col-lg-4 col-md-6 col-sm-12">
-              <div class="movie-bg-wrap" style="background: url(./assets/img/movie-5.jpg) no-repeat center/cover;">
-                <a href="#" class="movie-ticket-btn white-btn">予約</a>
-              </div>
-              <div class="movie-title">
-                <h5 class="movie-title__heading">STAND BY ME ドラえもん2</h5>
-                <p class="movie-title__sub">Stand by Me Doraemon 2</p>
-              </div>
-            </div>
-          </div>
+          <div class="row movies-tab g-3" id="playing-movies-tab"></div>
           <a href="#" class="more-btn mt-3">もっと</a>
         </div>
       </section>
@@ -456,44 +325,7 @@
             <h6 class="heading-ja">公開予定作品</h6>
             <h6 class="heading-en">Coming Soon</h6>
           </div>
-          <div class="row movies-tab g-3">
-            <div class="col-lg-4 col-md-6 col-sm-12">
-              <div class="movie-bg-wrap" style="background: url(./assets/img/movie-6.png) no-repeat center/cover;">
-                <a href="#" class="movie-ticket-btn white-btn">予約</a>
-              </div>
-              <div class="movie-title">
-                <h5 class="movie-title__heading">今日から俺は!! </h5>
-                <p class="movie-title__sub">Kyou Kara Ore wa!!</p>
-              </div>
-            </div>
-            <div class="col-lg-4 col-md-6 col-sm-12">
-              <div class="movie-bg-wrap" style="background: url(./assets/img/movie-7.jpg) no-repeat center/cover;">
-                <a href="#" class="movie-ticket-btn white-btn">予約</a>
-              </div>
-              <div class="movie-title">
-                <h5 class="movie-title__heading">TENET テネット</h5>
-                <p class="movie-title__sub">TENET</p>
-              </div>
-            </div>
-            <div class="col-lg-4 col-md-6 col-sm-12">
-              <div class="movie-bg-wrap" style="background: url(./assets/img/movie-8.jpg) no-repeat center/cover;">
-                <a href="#" class="movie-ticket-btn white-btn">予約</a>
-              </div>
-              <div class="movie-title">
-                <h5 class="movie-title__heading">るろうに剣心 最終章 The Beginning</h5>
-                <p class="movie-title__sub">Rurouni Kenshin: The Beginning</p>
-              </div>
-            </div>
-            <div class="col-lg-4 col-md-6 col-sm-12">
-              <div class="movie-bg-wrap" style="background: url(./assets/img/movie-9.jpg) no-repeat center/cover;">
-                <a href="#" class="movie-ticket-btn white-btn">予約</a>
-              </div>
-              <div class="movie-title">
-                <h5 class="movie-title__heading">ONE PIECE STAMPEDE</h5>
-                <p class="movie-title__sub">One Piece: Stampede</p>
-              </div>
-            </div>
-          </div>
+          <div class="row movies-tab g-3" id="coming-movies-tab"></div>
           <a href="#" class="more-btn mt-3">もっと</a>
         </div>
       </section>
@@ -505,7 +337,8 @@
           </div>
           <ul class="info-list">
             <li class="info-item">
-              <a href="#" class="info-link">＜新型コロナウイルス感染症対策＞全劇場・全座席の消毒について （2021年07月09日）</a>
+              <a href="#" class="info-link">＜新型コロナウイルス感染症対策＞全劇場・全座席の消毒について
+                （2021年07月09日）</a>
             </li>
             <li class="info-item">
               <a href="#" class="info-link">新型コロナウイルス感染予防の対応について（2021年07月09日）</a>
@@ -514,10 +347,13 @@
               <a href="#" class="info-link">毎週水曜日は「誰でも」オトク　7月14日から“楽ウェンズデイ”スタート（2021年05月19日）</a>
             </li>
             <li class="info-item">
-              <a href="#" class="info-link">2021年秋 南大阪エリア最大級の商業施設「セブンパーク天美」に「楽シネマズ セブンパーク天美」が出店（2021年03月31日）</a>
+              <a href="#" class="info-link">2021年秋
+                南大阪エリア最大級の商業施設「セブンパーク天美」に「楽シネマズ
+                セブンパーク天美」が出店（2021年03月31日）</a>
             </li>
             <li class="info-item">
-              <a href="#" class="info-link">楽シネマズ 名古屋ベイシティ 閉館のお知らせ（2020年12月01日）</a>
+              <a href="#" class="info-link">楽シネマズ 名古屋ベイシティ
+                閉館のお知らせ（2020年12月01日）</a>
             </li>
           </ul>
         </div>
@@ -532,28 +368,32 @@
             <div class="col-md-10">
               <div class="row justify-content-center">
                 <div class="col-md-6">
-                  <h5 class="contact-heading">楽シネマへの<br>
-                    ご意見・ご要望・お問合せ</h5>
+                  <h5 class="contact-heading">
+                    楽シネマへの<br />
+                    ご意見・ご要望・お問合せ
+                  </h5>
                   <div class="contact-img-wrap">
-                    <img src="./assets/img/contact.png" alt="" class="contact-img img-fluid">
+                    <img src="./assets/img/contact.png" alt="" class="contact-img img-fluid" />
                   </div>
                 </div>
                 <div class="col-md-6">
                   <form class="needs-validation" novalidate>
                     <div class="row">
                       <div class="col-md-12 form-group">
-                        <input type="text" class="form-control" placeholder="お名前" required>
-                        <div class="invalid-feedback">More example invalid feedback text</div>
+                        <input type="text" class="form-control" placeholder="お名前" required />
+                        <div class="invalid-feedback">
+                          More example invalid feedback text
+                        </div>
                       </div>
                     </div>
                     <div class="row">
                       <div class="col-md-12 form-group">
-                        <input type="text" class="form-control" placeholder="メールアドレス" required>
+                        <input type="text" class="form-control" placeholder="メールアドレス" required />
                       </div>
                     </div>
                     <div class="row">
                       <div class="col-md-12 form-group">
-                        <input type="text" class="form-control" placeholder="タイトル" required>
+                        <input type="text" class="form-control" placeholder="タイトル" required />
                       </div>
                     </div>
                     <div class="row">
@@ -564,7 +404,9 @@
                     </div>
                     <div class="row">
                       <div class="col-md-12">
-                        <button type="submit" class="white-btn rounded-3">確認</button>
+                        <button type="submit" class="white-btn rounded-3">
+                          確認
+                        </button>
                       </div>
                     </div>
                   </form>
@@ -583,12 +425,12 @@
             Copyright ©2021 All rights reserved by <span>ロック</span>
           </p>
           <div class="footer__social">
-            <a href="#"> <i class="fab fa-facebook    "></i> </a>
-            <a href="#"> <i class="fab fa-twitch    "></i> </a>
-            <a href="#"> <i class="fab fa-youtube    "></i> </a>
-            <a href="#"> <i class="fab fa-instagram    "></i> </a>
-            <a href="#"> <i class="fab fa-discord    "></i> </a>
-            <a href="#"> <i class="fab fa-reddit    "></i> </a>
+            <a href="#"> <i class="fab fa-facebook"></i> </a>
+            <a href="#"> <i class="fab fa-twitch"></i> </a>
+            <a href="#"> <i class="fab fa-youtube"></i> </a>
+            <a href="#"> <i class="fab fa-instagram"></i> </a>
+            <a href="#"> <i class="fab fa-discord"></i> </a>
+            <a href="#"> <i class="fab fa-reddit"></i> </a>
           </div>
         </div>
       </div>
@@ -723,20 +565,21 @@
     </button>
   </div>
   <!-- JS -->
-  
+
   <script src="./assets/js/varying-modal.js"></script>
   <script src="./assets/js/preload.js"></script>
   <script src="./assets/js/back-top.js"></script>
   <script src="./assets/js/slow-scroll.js"></script>
   <script src="./assets/js/multi-tab.js"></script>
-  <script src="./assets/js/slick-slider.js"></script>
+  <!-- <script src="./assets/js/slick-slider.js" defer></script> -->
   <script src="./assets/js/validation.js"></script>
+  <script src="./assets/js/render.js"></script>
   <script>
     AOS.init({
       delay: 100,
       duration: 1200,
-      easing: 'ease-out',
-      once: true,
+      easing: "ease-out",
+      once: false,
     });
   </script>
 </body>

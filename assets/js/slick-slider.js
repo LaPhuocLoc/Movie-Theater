@@ -1,4 +1,5 @@
-$('.rank').slick({
+
+$('rank').slick({
     centerMode: true,
     centerPadding: '250px',
     slidesToShow: 1,
